@@ -4,6 +4,7 @@
     package="com.implizstudio.android.app.warungkuowner">
 
     <application
+        android:name=".di.App"
         android:allowBackup="true"
         android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher"
@@ -23,8 +24,15 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
+
+        <activity
+            android:name=".ui.activity.intro.IntroActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.activity.started.StartedActivity"
+            android:screenOrientation="portrait" />
 
     </application>
 
