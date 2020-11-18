@@ -53,6 +53,7 @@ dependencies {
     // Material
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'com.tbuonomo.andrui:viewpagerdotsindicator:4.1.2'
 
     // Navigation
     def nav_version = '2.3.1'
