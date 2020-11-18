@@ -1,3 +1,27 @@
 <resources>
+    <array name="list_intro_image">
+        <item>@drawable/ic_intro_one</item>
+        <item>@drawable/ic_intro_two</item>
+        <item>@drawable/ic_intro_three</item>
+        <item>@drawable/ic_intro_four</item>
+    </array>
+    <string-array name="list_intro_title">
+        <item>Manage Products</item>
+        <item>Manage Employees</item>
+        <item>Easy Transaction</item>
+        <item>Buyer Orders</item>
+    </string-array>
+    <string-array name="list_intro_message">
+        <item>Now the products you sell can be easily managed via your smartphone.</item>
+        <item>Now you can easily manage attendance, salaries and bonuses for employees.</item>
+        <item>Now transactions with buyers are easier by scanning the bar code.</item>
+        <item>Now you can transact online with buyers.</item>
+    </string-array>
+
     <string name="app_name">WarungKu</string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="title">Title</string>
+    <string name="message">Message</string>
+    <string name="started">Started</string>
 </resources>
