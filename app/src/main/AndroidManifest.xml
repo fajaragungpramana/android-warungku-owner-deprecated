@@ -44,6 +44,10 @@
             android:noHistory="true"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name=".ui.activity.verification.VerificationActivity"
+            android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>
