@@ -24,4 +24,7 @@
     <string name="title">Title</string>
     <string name="message">Message</string>
     <string name="started">Started</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="started_message">We will help you easily manage your shop and reach a wider range of consumers.</string>
 </resources>
