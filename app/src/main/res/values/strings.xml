@@ -27,4 +27,10 @@
     <string name="register">Register</string>
     <string name="login">Login</string>
     <string name="started_message">We will help you easily manage your shop and reach a wider range of consumers.</string>
+    <string name="hello">Hello,</string>
+    <string name="login_message">Welcome back, please log in with your account to continue!</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="goto_register_message">Don\'t have an account?</string>
 </resources>
