@@ -28,4 +28,10 @@
     <string name="register">Daftar</string>
     <string name="login">Masuk</string>
     <string name="started_message">Kami akan membantu kamu mengelola warung dengan mudah dan menjangkau konsumen yang lebih luas.</string>
+    <string name="hello">Hallo,</string>
+    <string name="login_message">Selamat datang kembali silahkan masuk dengan akun kamu untuk melanjutkan!</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Lupa password?</string>
+    <string name="goto_register_message">Belum memiliki akun?</string>
 </resources>
