@@ -9,15 +9,18 @@
     <dimen name="margin_primary">8dp</dimen>
     <dimen name="margin_secondary">16dp</dimen>
     <dimen name="margin_medium">24dp</dimen>
+    <dimen name="margin_high">32dp</dimen>
     <dimen name="margin_very_high">80dp</dimen>
 
     <!-- Size -->
     <dimen name="size_primary_indicator">8dp</dimen>
     <dimen name="size_primary_stroke">1dp</dimen>
+    <dimen name="size_primary_horizontal_progress">4dp</dimen>
 
     <!-- Text -->
     <dimen name="text_primary_heading">20sp</dimen>
     <dimen name="text_primary_button">14sp</dimen>
     <dimen name="text_primary_body">14sp</dimen>
+    <dimen name="text_primary_caption">12sp</dimen>
 
 </resources>
