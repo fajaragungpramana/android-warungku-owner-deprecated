@@ -36,6 +36,12 @@
 
         <activity
             android:name=".ui.activity.login.LoginActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.activity.register.RegisterActivity"
+            android:noHistory="true"
             android:screenOrientation="portrait" />
 
     </application>
