@@ -3,20 +3,21 @@ package com.implizstudio.android.app.warungkuowner.ui.activity.intro
 import android.os.Bundle
 import android.view.animation.AnimationUtils
 import androidx.activity.viewModels
-import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import com.implizstudio.android.app.warungkuowner.R
 import com.implizstudio.android.app.warungkuowner.data.model.constant.Constant
+import com.implizstudio.android.app.warungkuowner.databinding.ActivityIntroBinding
 import com.implizstudio.android.app.warungkuowner.extension.startActivity
 import com.implizstudio.android.app.warungkuowner.ui.activity.started.StartedActivity
 import com.implizstudio.android.app.warungkuowner.ui.adapter.IntroAdapter
+import com.implizstudio.android.app.warungkuowner.ui.base.BaseActivity
 import com.implizstudio.android.app.warungkuowner.util.TemporarySave
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_intro.*
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class IntroActivity : AppCompatActivity() {
+class IntroActivity : BaseActivity<ActivityIntroBinding>() {
 
     private companion object {
         const val INTRO_SIZE = 3
@@ -27,9 +28,9 @@ class IntroActivity : AppCompatActivity() {
     @Inject
     lateinit var temporarySave: TemporarySave
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_intro)
+    override fun getContentView() = R.layout.activity_intro
+
+    override fun onCreated(savedInstanceState: Bundle?) {
 
         viewModel.listIntroData.observe(this, {
             vp_intro.adapter = IntroAdapter(this, it)
