@@ -38,4 +38,8 @@
     <string name="full_name">Full name</string>
     <string name="store_name">Store name</string>
     <string name="register_goto_login_message">Already have an account?</string>
+    <string name="sheet_condition_message">By login or register it mean you agree to</string>
+    <string name="you_must_know">You must know!</string>
+    <string name="terms_of_use">Terms of Use</string>
+    <string name="privacy_policy">Privacy Policy</string>
 </resources>

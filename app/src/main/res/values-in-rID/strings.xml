@@ -39,4 +39,8 @@
     <string name="full_name">Nama lengkap</string>
     <string name="store_name">Nama toko</string>
     <string name="register_goto_login_message">Sudah punya akun?</string>
+    <string name="sheet_condition_message">Dengan masuk atau daftar berarti anda setuju dengan</string>
+    <string name="you_must_know">Kamu harus tau!</string>
+    <string name="terms_of_use">Syarat Penggunaan</string>
+    <string name="privacy_policy">Kebijakan Privasi</string>
 </resources>
