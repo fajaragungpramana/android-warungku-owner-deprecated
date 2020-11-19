@@ -2,6 +2,7 @@
 <resources>
 
     <!-- Corner -->
+    <dimen name="corner_small">2dp</dimen>
     <dimen name="corner_rounded_button">28dp</dimen>
 
     <!-- Margin -->
@@ -11,6 +12,10 @@
     <dimen name="margin_medium">24dp</dimen>
     <dimen name="margin_high">32dp</dimen>
     <dimen name="margin_very_high">80dp</dimen>
+
+    <!-- Padding -->
+    <dimen name="padding_primary">8dp</dimen>
+    <dimen name="padding_secondary">16dp</dimen>
 
     <!-- Size -->
     <dimen name="size_primary_indicator">8dp</dimen>
