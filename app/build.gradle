@@ -18,7 +18,7 @@ android {
         versionName "1.0"
 
         buildConfigField("String", "BASE_URL", rootProject["app.base_url"])
-        buildConfigField("String", "ACCESS_KEY_OWENER", rootProject["app.access_key_owner"])
+        buildConfigField("String", "ACCESS_KEY_OWNER", rootProject["app.access_key_owner"])
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
