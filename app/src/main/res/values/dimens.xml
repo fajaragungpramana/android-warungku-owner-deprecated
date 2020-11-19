@@ -13,6 +13,7 @@
 
     <!-- Size -->
     <dimen name="size_primary_indicator">8dp</dimen>
+    <dimen name="size_primary_stroke">1dp</dimen>
 
     <!-- Text -->
     <dimen name="text_primary_heading">20sp</dimen>
