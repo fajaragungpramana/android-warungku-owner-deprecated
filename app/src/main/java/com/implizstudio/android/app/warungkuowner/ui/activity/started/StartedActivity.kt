@@ -1,14 +1,16 @@
 package com.implizstudio.android.app.warungkuowner.ui.activity.started
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import com.implizstudio.android.app.warungkuowner.R
+import com.implizstudio.android.app.warungkuowner.databinding.ActivityStartedBinding
+import com.implizstudio.android.app.warungkuowner.ui.base.BaseActivity
 
-class StartedActivity : AppCompatActivity() {
+class StartedActivity : BaseActivity<ActivityStartedBinding>() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_started)
+    override fun getContentView() = R.layout.activity_started
+
+    override fun onCreated(savedInstanceState: Bundle?) {
+
     }
 
 }
