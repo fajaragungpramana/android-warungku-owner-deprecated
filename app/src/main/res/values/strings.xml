@@ -33,4 +33,9 @@
     <string name="password">Password</string>
     <string name="forgot_password">Forgot password?</string>
     <string name="goto_register_message">Don\'t have an account?</string>
+    <string name="welcome">Welcome,</string>
+    <string name="register_message">Come join us, we will help manage your shop!</string>
+    <string name="full_name">Full name</string>
+    <string name="store_name">Store name</string>
+    <string name="register_goto_login_message">Already have an account?</string>
 </resources>

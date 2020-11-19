@@ -34,4 +34,9 @@
     <string name="password">Password</string>
     <string name="forgot_password">Lupa password?</string>
     <string name="goto_register_message">Belum memiliki akun?</string>
+    <string name="welcome">Selamat Datang,</string>
+    <string name="register_message">Mari bergabung dengan kami, kami akan membantu mengelola warung kamu!</string>
+    <string name="full_name">Nama lengkap</string>
+    <string name="store_name">Nama toko</string>
+    <string name="register_goto_login_message">Sudah punya akun?</string>
 </resources>
