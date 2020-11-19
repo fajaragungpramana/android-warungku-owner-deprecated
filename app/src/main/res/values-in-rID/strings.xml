@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="list_intro_image">
+        <item>@drawable/ic_intro_one</item>
+        <item>@drawable/ic_intro_two</item>
+        <item>@drawable/ic_intro_three</item>
+        <item>@drawable/ic_intro_four</item>
+    </array>
+    <string-array name="list_intro_title">
+        <item>Kelola Produk</item>
+        <item>Kelola Karyawan</item>
+        <item>Transaksi Mudah</item>
+        <item>Pesanan Pembeli</item>
+    </string-array>
+    <string-array name="list_intro_message">
+        <item>Sekarang produk yang kamu jual bisa di kelola dengan mudah lewat smartphone kamu.</item>
+        <item>Sekarang kamu bisa kelola kehadiran, gaji dan bonus untuk karyawan dengan mudah.</item>
+        <item>Sekarang transaksi dengan pembeli jadi lebih mudah dengan scan bar code.</item>
+        <item>Sekarang kamu bisa bertransaksi secara online dengan pembeli.</item>
+    </string-array>
+
+    <string name="app_name">WarungKu</string>
+    <string name="skip">Lewati</string>
+    <string name="next">Lanjut</string>
+    <string name="title">Judul</string>
+    <string name="message">Pesan</string>
+    <string name="started">Mulai</string>
+    <string name="register">Daftar</string>
+    <string name="login">Masuk</string>
+    <string name="started_message">Kami akan membantu kamu mengelola warung dengan mudah dan menjangkau konsumen yang lebih luas.</string>
+</resources>
