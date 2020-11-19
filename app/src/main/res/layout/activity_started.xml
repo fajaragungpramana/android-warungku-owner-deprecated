@@ -81,6 +81,7 @@
             android:layout_marginEnd="@dimen/margin_primary"
             android:layout_marginBottom="@dimen/margin_secondary"
             android:background="@drawable/bg_button_rounded_stroke"
+            android:onClick="@{() -> eventListener.gotoRegisterPage()}"
             android:text="@string/register"
             android:textColor="@color/color_secondary"
             app:layout_constraintBottom_toBottomOf="parent"
