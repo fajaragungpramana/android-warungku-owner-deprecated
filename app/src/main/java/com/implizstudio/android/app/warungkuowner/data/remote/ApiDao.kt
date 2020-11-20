@@ -10,9 +10,9 @@ interface ApiDao {
 
     interface WarungKu {
 
-        @POST
+        @POST("owner/auth/register")
         @FormUrlEncoded
-        suspend fun doAccountRegister(@FieldMap data: Pair<String, String>): Response<OwnerResponse>
+        suspend fun doAccountRegister(@FieldMap data: MutableMap<String, String?>): Response<OwnerResponse>
 
     }
 
