@@ -52,4 +52,5 @@
     <string name="error_text_changed_store">Store name min 4 character!</string>
     <string name="error_text_changed_email">Format email is wrong!</string>
     <string name="error_text_changed_password">Password min 8 character!</string>
+    <string name="error_text_changed_account_already_registered">Account with same email is already exist!</string>
 </resources>
