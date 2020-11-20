@@ -8,14 +8,14 @@ import kotlinx.coroutines.async
 
 class WarungKuRepositoryImpl(private val warungKuDao: ApiDao.WarungKu) : WarungKuRepository {
 
-    override suspend fun doAccountRegister(data: Pair<String, String>): ApiResult<OwnerResponse> =
+    override suspend fun doAccountRegister(data: MutableMap<String, String?>): ApiResult<OwnerResponse> =
         try {
 
             val response = GlobalScope.async { warungKuDao.doAccountRegister(data) }
             val result = response.await()
 
             if (result.isSuccessful)
-                ApiResult.Success(result.body())
+                ApiResult.Success(result.body(), result.code())
             else
                 ApiResult.Failure(result.code())
 

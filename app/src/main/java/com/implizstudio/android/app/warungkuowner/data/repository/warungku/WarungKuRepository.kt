@@ -5,6 +5,6 @@ import com.implizstudio.android.app.warungkuowner.data.remote.ApiResult
 
 interface WarungKuRepository {
 
-    suspend fun doAccountRegister(data: Pair<String, String>) : ApiResult<OwnerResponse>
+    suspend fun doAccountRegister(data: MutableMap<String, String?>) : ApiResult<OwnerResponse>
 
 }
