@@ -49,4 +49,8 @@
     <string name="not_receive_the_code">Tidak menerima kode?</string>
     <string name="resending">Kirim Ulang</string>
     <string name="verification">Verifikasi</string>
+    <string name="error_text_changed_full_name">Nama minimal 4 karakter!</string>
+    <string name="error_text_changed_store">Nama toko minimal 4 karakter!</string>
+    <string name="error_text_changed_email">Format email salah!</string>
+    <string name="error_text_changed_password">Password minimal 8 karakter!</string>
 </resources>
