@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.implizstudio.android.app.warungkuowner">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".di.App"
         android:allowBackup="true"
