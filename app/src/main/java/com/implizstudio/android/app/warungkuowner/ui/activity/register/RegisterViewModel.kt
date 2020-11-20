@@ -7,6 +7,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.implizstudio.android.app.warungkuowner.data.model.Owner
 import com.implizstudio.android.app.warungkuowner.data.model.Store
+import com.implizstudio.android.app.warungkuowner.data.model.response.OwnerResponse
 import com.implizstudio.android.app.warungkuowner.data.remote.ApiResult
 import com.implizstudio.android.app.warungkuowner.data.repository.warungku.WarungKuRepository
 import kotlinx.coroutines.GlobalScope
@@ -38,6 +39,14 @@ class RegisterViewModel @ViewModelInject constructor(private val warungKuReposit
     private val _isEnableRegister = MutableLiveData<Boolean>()
     val isEnableRegister: LiveData<Boolean>
         get() = _isEnableRegister
+
+    private val _responseBody = MutableLiveData<OwnerResponse>()
+    val responseBody: LiveData<OwnerResponse>
+        get() = _responseBody
+
+    private val _responseCode = MutableLiveData<Int>()
+    val responseCode: LiveData<Int>
+        get() = _responseCode
 
     fun onNameTextChanged(name: CharSequence?) {
         _isErrorName.value = name.let { it != null && it.length < 4 }
@@ -82,15 +91,17 @@ class RegisterViewModel @ViewModelInject constructor(private val warungKuReposit
 
                 is ApiResult.Success -> {
                     _isShowProgressBar.postValue(false)
+                    _responseBody.postValue(result.data)
+                    _responseCode.postValue(result.code)
                 }
 
                 is ApiResult.Failure -> {
                     _isShowProgressBar.postValue(false)
+                    _responseCode.postValue(result.code)
                 }
 
-                is ApiResult.Error -> {
+                is ApiResult.Error ->
                     _isShowProgressBar.postValue(false)
-                }
 
             }
 
