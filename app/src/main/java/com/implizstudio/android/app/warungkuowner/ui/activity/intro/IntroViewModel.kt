@@ -5,7 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.implizstudio.android.app.warungkuowner.data.model.Intro
-import com.implizstudio.android.app.warungkuowner.data.repository.AppResourceRepository
+import com.implizstudio.android.app.warungkuowner.data.repository.app.AppResourceRepository
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
