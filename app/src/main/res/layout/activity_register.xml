@@ -9,6 +9,18 @@
             name="eventListener"
             type="com.implizstudio.android.app.warungkuowner.util.EventListener" />
 
+        <variable
+            name="viewModel"
+            type="com.implizstudio.android.app.warungkuowner.ui.activity.register.RegisterViewModel" />
+
+        <variable
+            name="owner"
+            type="com.implizstudio.android.app.warungkuowner.data.model.Owner" />
+
+        <variable
+            name="store"
+            type="com.implizstudio.android.app.warungkuowner.data.model.Store" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -23,6 +35,7 @@
             android:layout_height="@dimen/size_primary_horizontal_progress"
             android:indeterminate="true"
             android:indeterminateTint="@color/color_secondary"
+            app:isShowed="@{viewModel.isShowProgressBar()}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -88,6 +101,7 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_register_message"
             app:layout_constraintVertical_bias="0.0">
 
+            <!--suppress AndroidUnknownAttribute -->
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/tie_register_name"
                 style="@style/PrimaryBody"
@@ -95,7 +109,9 @@
                 android:layout_height="wrap_content"
                 android:background="@color/color_on_primary_light"
                 android:hint="@string/full_name"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:onTextChanged="@{(text, start, before, count) -> viewModel.onNameTextChanged(text)}"
+                android:text="@={owner.fullName}" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -112,6 +128,7 @@
             app:layout_constraintTop_toBottomOf="@+id/til_register_name"
             app:layout_constraintVertical_bias="0.0">
 
+            <!--suppress AndroidUnknownAttribute -->
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/tie_register_store"
                 style="@style/PrimaryBody"
@@ -119,7 +136,9 @@
                 android:layout_height="wrap_content"
                 android:background="@color/color_on_primary_light"
                 android:hint="@string/store_name"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:onTextChanged="@{(text, start, before, count) -> viewModel.onStoreNameTextChanged(text)}"
+                android:text="@={store.name}" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -136,6 +155,7 @@
             app:layout_constraintTop_toBottomOf="@+id/til_register_store"
             app:layout_constraintVertical_bias="0.0">
 
+            <!--suppress AndroidUnknownAttribute -->
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/tie_register_email"
                 style="@style/PrimaryBody"
@@ -143,7 +163,9 @@
                 android:layout_height="wrap_content"
                 android:background="@color/color_on_primary_light"
                 android:hint="@string/email"
-                android:inputType="textEmailAddress" />
+                android:inputType="textEmailAddress"
+                android:onTextChanged="@{(text, start, before, count) -> viewModel.onEmailTextChanged(text)}"
+                android:text="@={owner.email}" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -161,6 +183,7 @@
             app:layout_constraintVertical_bias="0.0"
             app:passwordToggleEnabled="true">
 
+            <!--suppress AndroidUnknownAttribute -->
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/tie_register_password"
                 style="@style/PrimaryBody"
@@ -168,7 +191,9 @@
                 android:layout_height="wrap_content"
                 android:background="@color/color_on_primary_light"
                 android:hint="@string/password"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:onTextChanged="@{(text, start, before, count) -> viewModel.onPasswordTextChanged(text)}"
+                android:text="@={owner.password}" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -179,8 +204,10 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/margin_secondary"
             android:layout_marginBottom="@dimen/margin_secondary"
-            android:background="@drawable/bg_button_rounded"
+            android:background="@drawable/bg_button_rounded_disable"
+            android:enabled="false"
             android:text="@string/register"
+            android:onClick="@{() -> viewModel.doRegisterAccount(owner, store)}"
             app:layout_constraintBottom_toTopOf="@+id/ll_register_goto_login"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
