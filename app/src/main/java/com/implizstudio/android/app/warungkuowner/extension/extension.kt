@@ -3,9 +3,10 @@ package com.implizstudio.android.app.warungkuowner.extension
 import android.content.Context
 import android.content.Intent
 import android.os.Parcelable
+import android.view.View
 
 @Suppress("UNCHECKED_CAST")
-inline fun <reified T> Context.startActivity(vararg listData: Pair<String, Any>){
+inline fun <reified T> Context.startActivity(vararg listData: Pair<String, Any>) {
     val intent = Intent(this, T::class.java)
 
     if (listData.isNotEmpty())
@@ -20,4 +21,12 @@ inline fun <reified T> Context.startActivity(vararg listData: Pair<String, Any>)
         }
 
     startActivity(intent)
+}
+
+fun View.invisible() {
+    visibility = View.INVISIBLE
+}
+
+fun View.visible() {
+    visibility = View.VISIBLE
 }
