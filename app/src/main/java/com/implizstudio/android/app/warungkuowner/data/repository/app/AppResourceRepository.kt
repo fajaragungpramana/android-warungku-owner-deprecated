@@ -1,4 +1,4 @@
-package com.implizstudio.android.app.warungkuowner.data.repository
+package com.implizstudio.android.app.warungkuowner.data.repository.app
 
 import android.content.res.TypedArray
 

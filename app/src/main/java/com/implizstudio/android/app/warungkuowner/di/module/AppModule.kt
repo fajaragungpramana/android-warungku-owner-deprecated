@@ -3,8 +3,8 @@ package com.implizstudio.android.app.warungkuowner.di.module
 import android.content.Context
 import android.content.res.Resources
 import com.implizstudio.android.app.warungkuowner.data.local.AppResource
-import com.implizstudio.android.app.warungkuowner.data.repository.AppResourceRepository
-import com.implizstudio.android.app.warungkuowner.data.repository.AppResourceRepositoryImpl
+import com.implizstudio.android.app.warungkuowner.data.repository.app.AppResourceRepository
+import com.implizstudio.android.app.warungkuowner.data.repository.app.AppResourceRepositoryImpl
 import com.implizstudio.android.app.warungkuowner.util.TemporarySave
 import dagger.Module
 import dagger.Provides
