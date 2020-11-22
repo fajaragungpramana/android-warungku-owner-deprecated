@@ -7,4 +7,6 @@ interface WarungKuRepository {
 
     suspend fun doAccountRegister(data: MutableMap<String, String?>) : ApiResult<OwnerResponse>
 
+    suspend fun doAccountLogin(email: String?, password: String?) : ApiResult<OwnerResponse>
+
 }
