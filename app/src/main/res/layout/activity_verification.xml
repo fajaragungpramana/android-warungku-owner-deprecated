@@ -9,6 +9,10 @@
             name="eventListener"
             type="com.implizstudio.android.app.warungkuowner.util.EventListener" />
 
+        <variable
+            name="email"
+            type="String" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -98,7 +102,7 @@
             android:layout_marginHorizontal="@dimen/padding_secondary"
             android:layout_marginTop="@dimen/margin_secondary"
             android:gravity="center"
-            android:text="@string/verification_info"
+            android:text="@{@string/verification_info(email)}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
