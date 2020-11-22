@@ -5,7 +5,10 @@ object Constant {
     const val KEY_IS_INTRODUCED = "is_introduced"
     const val KEY_OWNER_ID = "owner_id"
 
+    const val HTTP_RESPONSE_OK = 200
     const val HTTP_RESPONSE_CREATED = 201
     const val HTTP_RESPONSE_NOT_ACCEPTABLE = 406
+    const val HTTP_RESPONSE_NOT_FOUND = 404
+    const val HTTP_RESPONSE_UNAUTHORIZED = 401
 
 }
