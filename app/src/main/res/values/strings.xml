@@ -44,7 +44,7 @@
     <string name="privacy_policy">Privacy Policy</string>
     <string name="just_one_more_step">Just one more step,</string>
     <string name="verification_message">For security we need to verify your account!</string>
-    <string name="verification_info">We have sent a verification code to the email \n %s</string>
+    <string name="verification_info">We have sent a verification code to the email \n <b>%s</b></string>
     <string name="not_receive_the_code">Not receive the code?</string>
     <string name="resending">Resending</string>
     <string name="verification">Verification</string>

@@ -45,7 +45,7 @@
     <string name="privacy_policy">Kebijakan Privasi</string>
     <string name="just_one_more_step">Tinggal selangkah lagi,</string>
     <string name="verification_message">Demi keamanan kami perlu memverifikasi akun kamu!</string>
-    <string name="verification_info">Kami telah mengirimkan kode verifikasi ke email \n %s</string>
+    <string name="verification_info">Kami telah mengirimkan kode verifikasi ke email \n <b>%s</b></string>
     <string name="not_receive_the_code">Tidak menerima kode?</string>
     <string name="resending">Kirim Ulang</string>
     <string name="verification">Verifikasi</string>
