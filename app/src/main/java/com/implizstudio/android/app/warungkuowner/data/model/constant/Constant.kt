@@ -7,6 +7,7 @@ object Constant {
 
     const val HTTP_RESPONSE_OK = 200
     const val HTTP_RESPONSE_CREATED = 201
+    const val HTTP_RESPONSE_ACCEPTED = 202
     const val HTTP_RESPONSE_NOT_ACCEPTABLE = 406
     const val HTTP_RESPONSE_NOT_FOUND = 404
     const val HTTP_RESPONSE_UNAUTHORIZED = 401
