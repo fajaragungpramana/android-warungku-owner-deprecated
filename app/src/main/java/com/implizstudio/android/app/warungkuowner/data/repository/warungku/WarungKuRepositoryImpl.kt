@@ -23,4 +23,22 @@ class WarungKuRepositoryImpl(private val warungKuDao: ApiDao.WarungKu) : WarungK
             ApiResult.Error(exc)
         }
 
+    override suspend fun doAccountLogin(
+        email: String?,
+        password: String?
+    ): ApiResult<OwnerResponse> =
+        try {
+
+            val response = GlobalScope.async { warungKuDao.doAccountLogin(email, password) }
+            val result = response.await()
+
+            if (result.isSuccessful)
+                ApiResult.Success(result.body(), result.code())
+            else
+                ApiResult.Failure(result.code())
+
+        } catch (exc: Throwable) {
+            ApiResult.Error(exc)
+        }
+
 }
