@@ -6,7 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.implizstudio.android.app.warungkuowner.data.model.Owner
-import com.implizstudio.android.app.warungkuowner.data.model.response.OwnerResponse
+import com.implizstudio.android.app.warungkuowner.data.model.response.WarungKuResponse
 import com.implizstudio.android.app.warungkuowner.data.remote.ApiResult
 import com.implizstudio.android.app.warungkuowner.data.repository.warungku.WarungKuRepository
 import kotlinx.coroutines.GlobalScope
@@ -31,8 +31,8 @@ class LoginViewModel @ViewModelInject constructor(private val warungKuRepository
     val isEnableLogin: LiveData<Boolean>
         get() = _isEnableLogin
 
-    private val _responseBody = MutableLiveData<OwnerResponse>()
-    val responseBody: LiveData<OwnerResponse>
+    private val _responseBody = MutableLiveData<WarungKuResponse.Data<Owner>>()
+    val responseBody: LiveData<WarungKuResponse.Data<Owner>>
         get() = _responseBody
 
     private val _responseCode = MutableLiveData<Int>()

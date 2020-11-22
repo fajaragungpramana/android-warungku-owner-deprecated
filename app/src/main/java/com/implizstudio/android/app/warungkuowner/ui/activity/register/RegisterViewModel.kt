@@ -7,7 +7,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.implizstudio.android.app.warungkuowner.data.model.Owner
 import com.implizstudio.android.app.warungkuowner.data.model.Store
-import com.implizstudio.android.app.warungkuowner.data.model.response.OwnerResponse
+import com.implizstudio.android.app.warungkuowner.data.model.response.WarungKuResponse
 import com.implizstudio.android.app.warungkuowner.data.remote.ApiResult
 import com.implizstudio.android.app.warungkuowner.data.repository.warungku.WarungKuRepository
 import kotlinx.coroutines.GlobalScope
@@ -40,8 +40,8 @@ class RegisterViewModel @ViewModelInject constructor(private val warungKuReposit
     val isEnableRegister: LiveData<Boolean>
         get() = _isEnableRegister
 
-    private val _responseBody = MutableLiveData<OwnerResponse>()
-    val responseBody: LiveData<OwnerResponse>
+    private val _responseBody = MutableLiveData<WarungKuResponse.Data<Owner>>()
+    val responseBody: LiveData<WarungKuResponse.Data<Owner>>
         get() = _responseBody
 
     private val _responseCode = MutableLiveData<Int>()

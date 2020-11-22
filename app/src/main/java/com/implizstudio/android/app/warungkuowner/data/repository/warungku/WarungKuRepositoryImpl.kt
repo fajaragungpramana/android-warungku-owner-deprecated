@@ -1,6 +1,7 @@
 package com.implizstudio.android.app.warungkuowner.data.repository.warungku
 
-import com.implizstudio.android.app.warungkuowner.data.model.response.OwnerResponse
+import com.implizstudio.android.app.warungkuowner.data.model.Owner
+import com.implizstudio.android.app.warungkuowner.data.model.response.WarungKuResponse
 import com.implizstudio.android.app.warungkuowner.data.remote.ApiDao
 import com.implizstudio.android.app.warungkuowner.data.remote.ApiResult
 import kotlinx.coroutines.GlobalScope
@@ -8,7 +9,7 @@ import kotlinx.coroutines.async
 
 class WarungKuRepositoryImpl(private val warungKuDao: ApiDao.WarungKu) : WarungKuRepository {
 
-    override suspend fun doAccountRegister(data: MutableMap<String, String?>): ApiResult<OwnerResponse> =
+    override suspend fun doAccountRegister(data: MutableMap<String, String?>): ApiResult<WarungKuResponse.Data<Owner>> =
         try {
 
             val response = GlobalScope.async { warungKuDao.doAccountRegister(data) }
@@ -26,7 +27,7 @@ class WarungKuRepositoryImpl(private val warungKuDao: ApiDao.WarungKu) : WarungK
     override suspend fun doAccountLogin(
         email: String?,
         password: String?
-    ): ApiResult<OwnerResponse> =
+    ): ApiResult<WarungKuResponse.Data<Owner>> =
         try {
 
             val response = GlobalScope.async { warungKuDao.doAccountLogin(email, password) }
