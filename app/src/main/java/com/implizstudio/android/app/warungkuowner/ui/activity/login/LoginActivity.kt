@@ -62,7 +62,13 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>() {
                 Constant.HTTP_RESPONSE_NOT_ACCEPTABLE -> til_login_password.error =
                     getString(R.string.error_text_changed_wrong_password)
 
-                Constant.HTTP_RESPONSE_ACCEPTED -> startActivity<VerificationActivity>()
+                Constant.HTTP_RESPONSE_ACCEPTED -> {
+                    val email = getViewDataBinding().owner?.email.toString()
+
+                    startActivity<VerificationActivity>(
+                        Constant.KEY_OWNER_EMAIL to email
+                    )
+                }
 
             }
         })
