@@ -54,4 +54,7 @@
     <string name="error_text_changed_email">Format email salah!</string>
     <string name="error_text_changed_password">Password minimal 8 karakter!</string>
     <string name="error_text_changed_account_already_registered">Akun dengan email yang sama sudah terdaftar!</string>
+    <string name="error_text_changed_password_empty">Password tidak boleh kosong!</string>
+    <string name="error_text_changed_account_is_not_registered">Akun ini tidak terdaftar!</string>
+    <string name="error_text_changed_wrong_password">Password salah!</string>
 </resources>
