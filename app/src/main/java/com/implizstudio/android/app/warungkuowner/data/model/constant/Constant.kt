@@ -3,6 +3,8 @@ package com.implizstudio.android.app.warungkuowner.data.model.constant
 object Constant {
 
     const val KEY_IS_INTRODUCED = "is_introduced"
+    const val KEY_COUNT_TIME = "count_time"
+    const val KEY_COUNT_TIME_FINISHED = "count_time_finished"
     const val KEY_OWNER_ID = "owner_id"
     const val KEY_OWNER_EMAIL = "owner_email"
 
