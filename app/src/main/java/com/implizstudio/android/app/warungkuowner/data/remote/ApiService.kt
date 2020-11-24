@@ -5,8 +5,11 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.util.concurrent.TimeUnit
 
 object ApiService {
+
+    private const val COMMUNICATE_TIME_OUT = 30L
 
     private val httpLoggingInterceptor: () -> HttpLoggingInterceptor = {
         HttpLoggingInterceptor().apply { level = HttpLoggingInterceptor.Level.BODY }
@@ -18,6 +21,8 @@ object ApiService {
             .addConverterFactory(GsonConverterFactory.create())
             .client(
                 OkHttpClient.Builder()
+                    .readTimeout(COMMUNICATE_TIME_OUT, TimeUnit.SECONDS)
+                    .writeTimeout(COMMUNICATE_TIME_OUT, TimeUnit.SECONDS)
                     .addInterceptor(httpLoggingInterceptor())
                     .addInterceptor {
                         it.proceed(
