@@ -1,6 +1,7 @@
 package com.implizstudio.android.app.warungkuowner.data.repository.warungku
 
 import com.implizstudio.android.app.warungkuowner.data.model.Owner
+import com.implizstudio.android.app.warungkuowner.data.model.Verification
 import com.implizstudio.android.app.warungkuowner.data.model.response.WarungKuResponse
 import com.implizstudio.android.app.warungkuowner.data.remote.ApiDao
 import com.implizstudio.android.app.warungkuowner.data.remote.ApiResult
@@ -31,6 +32,26 @@ class WarungKuRepositoryImpl(private val warungKuDao: ApiDao.WarungKu) : WarungK
         try {
 
             val response = GlobalScope.async { warungKuDao.doAccountLogin(email, password) }
+            val result = response.await()
+
+            if (result.isSuccessful)
+                ApiResult.Success(result.body(), result.code())
+            else
+                ApiResult.Failure(result.code())
+
+        } catch (exc: Throwable) {
+            ApiResult.Error(exc)
+        }
+
+    override suspend fun doSendVerificationCode(
+        accountId: String?,
+        accountEmail: String?
+    ): ApiResult<WarungKuResponse.Data<Verification>> =
+        try {
+
+            val response = GlobalScope.async {
+                warungKuDao.doSendVerificationCode(accountId, accountEmail)
+            }
             val result = response.await()
 
             if (result.isSuccessful)
