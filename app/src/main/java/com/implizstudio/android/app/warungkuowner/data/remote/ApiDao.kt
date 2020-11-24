@@ -1,12 +1,10 @@
 package com.implizstudio.android.app.warungkuowner.data.remote
 
 import com.implizstudio.android.app.warungkuowner.data.model.Owner
+import com.implizstudio.android.app.warungkuowner.data.model.Verification
 import com.implizstudio.android.app.warungkuowner.data.model.response.WarungKuResponse
 import retrofit2.Response
-import retrofit2.http.Field
-import retrofit2.http.FieldMap
-import retrofit2.http.FormUrlEncoded
-import retrofit2.http.POST
+import retrofit2.http.*
 
 interface ApiDao {
 
@@ -22,6 +20,12 @@ interface ApiDao {
             @Field("email") email: String?,
             @Field("password") password: String?
         ): Response<WarungKuResponse.Data<Owner>>
+
+        @GET("owner/auth/code")
+        suspend fun doSendVerificationCode(
+            @Query("account_id") accountId: String?,
+            @Query("account_email") accountEmail: String?
+        ): Response<WarungKuResponse.Data<Verification>>
 
     }
 
