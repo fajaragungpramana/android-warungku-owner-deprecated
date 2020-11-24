@@ -17,6 +17,8 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
 
+        <service android:name=".service.CountDownService" />
+
         <activity
             android:name=".ui.activity.loading.LoadingActivity"
             android:screenOrientation="portrait">
