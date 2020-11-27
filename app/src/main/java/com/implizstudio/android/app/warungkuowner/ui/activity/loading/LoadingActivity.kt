@@ -8,6 +8,7 @@ import com.implizstudio.android.app.warungkuowner.R
 import com.implizstudio.android.app.warungkuowner.data.model.constant.Constant
 import com.implizstudio.android.app.warungkuowner.extension.startActivity
 import com.implizstudio.android.app.warungkuowner.ui.activity.intro.IntroActivity
+import com.implizstudio.android.app.warungkuowner.ui.activity.main.MainActivity
 import com.implizstudio.android.app.warungkuowner.ui.activity.started.StartedActivity
 import com.implizstudio.android.app.warungkuowner.util.TemporarySave
 import dagger.hilt.android.AndroidEntryPoint
@@ -29,7 +30,10 @@ class LoadingActivity : AppCompatActivity() {
         Handler(Looper.getMainLooper()).postDelayed({
 
             if (temporarySave.get(Constant.KEY_IS_INTRODUCED, false) as Boolean)
-                startActivity<StartedActivity>()
+                if (temporarySave.get(Constant.KEY_IS_LOGGED_IN, false) as Boolean)
+                    startActivity<MainActivity>()
+                else
+                    startActivity<StartedActivity>()
             else
                 startActivity<IntroActivity>()
 
