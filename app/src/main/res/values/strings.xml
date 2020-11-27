@@ -56,4 +56,6 @@
     <string name="error_text_changed_password_empty">Password cannot be empty!</string>
     <string name="error_text_changed_account_is_not_registered">Account is not registered!</string>
     <string name="error_text_changed_wrong_password">Wrong password!</string>
+    <string name="wrong_verification_code">Wrong Verification Code</string>
+    <string name="verification_code_expired">Verification Code Expired</string>
 </resources>
