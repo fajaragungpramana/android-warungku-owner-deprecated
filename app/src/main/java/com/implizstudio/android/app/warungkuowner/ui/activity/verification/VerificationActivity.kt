@@ -12,11 +12,14 @@ import com.implizstudio.android.app.warungkuowner.R
 import com.implizstudio.android.app.warungkuowner.data.model.Owner
 import com.implizstudio.android.app.warungkuowner.data.model.constant.Constant
 import com.implizstudio.android.app.warungkuowner.databinding.ActivityVerificationBinding
+import com.implizstudio.android.app.warungkuowner.extension.startActivity
 import com.implizstudio.android.app.warungkuowner.service.CountDownService
+import com.implizstudio.android.app.warungkuowner.ui.activity.main.MainActivity
 import com.implizstudio.android.app.warungkuowner.ui.base.BaseActivity
 import com.implizstudio.android.app.warungkuowner.util.EventListener
 import com.implizstudio.android.app.warungkuowner.util.TemporarySave
 import dagger.hilt.android.AndroidEntryPoint
+import es.dmoral.toasty.Toasty
 import kotlinx.android.synthetic.main.activity_verification.*
 import javax.inject.Inject
 
@@ -92,7 +95,7 @@ class VerificationActivity : BaseActivity<ActivityVerificationBinding>() {
             }
 
             override fun onOTPComplete(otp: String?) {
-                if (otp.let { it != null && it.length == 6 })
+                if (otp.let { it != null && it.length == 6 }) {
                     btn_verification.let {
                         it.isEnabled = true
                         it.background = ContextCompat.getDrawable(
@@ -100,13 +103,31 @@ class VerificationActivity : BaseActivity<ActivityVerificationBinding>() {
                             R.drawable.bg_button_rounded
                         )
                     }
+                    getViewDataBinding().code = otp
+                }
 
             }
 
         }
 
-        viewModel.responseBody.observe(this, {
+        viewModel.responseBody.observe(this, { getViewDataBinding().accessToken = it.token })
+        viewModel.responseCode.observe(this, {
+            when (it) {
 
+                Constant.HTTP_RESPONSE_OK -> {
+                    temporarySave.set(Constant.KEY_IS_LOGGED_IN, true)
+
+                    startActivity<MainActivity>()
+                    finishAffinity()
+                }
+
+                Constant.HTTP_RESPONSE_NOT_ACCEPTABLE ->
+                    Toasty.error(this, getString(R.string.wrong_verification_code)).show()
+
+                Constant.HTTP_RESPONSE_UNAUTHORIZED ->
+                    Toasty.error(this, getString(R.string.verification_code_expired)).show()
+
+            }
         })
 
     }
