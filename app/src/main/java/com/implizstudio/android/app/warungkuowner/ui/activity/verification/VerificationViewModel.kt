@@ -26,6 +26,10 @@ class VerificationViewModel @ViewModelInject constructor(
     val responseBody: LiveData<Verification>
         get() = _responseBody
 
+    private val _responseCode = MutableLiveData<Int>()
+    val responseCode: LiveData<Int>
+        get() = _responseCode
+
     fun doSendVerificationCode(owner: Owner) {
         context.startService(Intent(context, CountDownService::class.java))
 
@@ -48,6 +52,31 @@ class VerificationViewModel @ViewModelInject constructor(
             }
 
         }
+    }
+
+    fun doAccountVerification(accessToken: String?, accountId: String?, code: String?) {
+        _isShowProgressBar.value = true
+        GlobalScope.launch {
+
+            when (val result = warungKuRepository.doAccountVerification(accessToken, accountId, code?.toInt())) {
+
+                is ApiResult.Success -> {
+                    _isShowProgressBar.postValue(false)
+                    _responseCode.postValue(result.code)
+                }
+
+                is ApiResult.Failure -> {
+                    _isShowProgressBar.postValue(false)
+                    _responseCode.postValue(result.code)
+                }
+
+                is ApiResult.Error ->
+                    _isShowProgressBar.postValue(false)
+
+            }
+
+        }
+
     }
 
 }
