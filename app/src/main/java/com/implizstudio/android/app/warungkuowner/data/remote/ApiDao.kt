@@ -27,6 +27,14 @@ interface ApiDao {
             @Query("account_email") accountEmail: String?
         ): Response<WarungKuResponse.Data<Verification>>
 
+        @POST("owner/auth/verification")
+        @FormUrlEncoded
+        suspend fun doAccountVerification(
+            @Header("Authorization") accessToken: String?,
+            @Field("account_id") accountId: String?,
+            @Field("account_code") accountCode: Int?
+        ): Response<WarungKuResponse.Data<Any>>
+
     }
 
 }
