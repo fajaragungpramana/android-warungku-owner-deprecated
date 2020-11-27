@@ -63,6 +63,7 @@ dependencies {
     implementation 'com.tbuonomo.andrui:viewpagerdotsindicator:4.1.2'
     implementation 'com.github.Deishelon:RoundedBottomSheet:1.0.1'
     implementation 'com.github.aabhasr1:OtpView:v1.1.2'
+    implementation 'com.github.GrenderG:Toasty:1.5.0'
 
     // Navigation
     def nav_version = '2.3.1'
