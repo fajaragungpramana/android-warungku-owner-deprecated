@@ -17,6 +17,14 @@
             name="owner"
             type="com.implizstudio.android.app.warungkuowner.data.model.Owner" />
 
+        <variable
+            name="accessToken"
+            type="String" />
+
+        <variable
+            name="code"
+            type="String" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -136,6 +144,7 @@
             android:layout_marginBottom="@dimen/margin_secondary"
             android:background="@drawable/bg_button_rounded_disable"
             android:enabled="false"
+            android:onClick="@{()-> viewModel.doAccountVerification(accessToken, owner.id, code)}"
             android:text="@string/verification"
             app:layout_constraintBottom_toTopOf="@+id/ll_verification_resend"
             app:layout_constraintEnd_toEndOf="parent"
