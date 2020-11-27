@@ -7,10 +7,22 @@ import com.implizstudio.android.app.warungkuowner.data.remote.ApiResult
 
 interface WarungKuRepository {
 
-    suspend fun doAccountRegister(data: MutableMap<String, String?>) : ApiResult<WarungKuResponse.Data<Owner>>
+    suspend fun doAccountRegister(data: MutableMap<String, String?>): ApiResult<WarungKuResponse.Data<Owner>>
 
-    suspend fun doAccountLogin(email: String?, password: String?) : ApiResult<WarungKuResponse.Data<Owner>>
+    suspend fun doAccountLogin(
+        email: String?,
+        password: String?
+    ): ApiResult<WarungKuResponse.Data<Owner>>
 
-    suspend fun doSendVerificationCode(accountId: String?, accountEmail: String?) : ApiResult<WarungKuResponse.Data<Verification>>
+    suspend fun doSendVerificationCode(
+        accountId: String?,
+        accountEmail: String?
+    ): ApiResult<WarungKuResponse.Data<Verification>>
+
+    suspend fun doAccountVerification(
+        accessToken: String?,
+        accountId: String?,
+        accountCode: Int?
+    ): ApiResult<WarungKuResponse.Data<Any>>
 
 }
