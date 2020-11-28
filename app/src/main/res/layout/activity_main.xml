@@ -4,10 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context=".ui.activity.main.MainActivity">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fcv_main"
+        android:name="com.implizstudio.android.app.warungkuowner.ui.fragment.main.MainFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
