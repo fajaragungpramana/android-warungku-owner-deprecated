@@ -1,6 +1,7 @@
 package com.implizstudio.android.app.warungkuowner.data.remote
 
 import com.implizstudio.android.app.warungkuowner.data.model.Owner
+import com.implizstudio.android.app.warungkuowner.data.model.ReportResult
 import com.implizstudio.android.app.warungkuowner.data.model.Verification
 import com.implizstudio.android.app.warungkuowner.data.model.response.WarungKuResponse
 import retrofit2.Response
@@ -22,7 +23,7 @@ interface ApiDao {
         ): Response<WarungKuResponse.Data<Owner>>
 
         @GET("owner/auth/code")
-        suspend fun doSendVerificationCode(
+        suspend fun getVerificationCode(
             @Query("account_id") accountId: String?,
             @Query("account_email") accountEmail: String?
         ): Response<WarungKuResponse.Data<Verification>>
@@ -34,6 +35,9 @@ interface ApiDao {
             @Field("account_id") accountId: String?,
             @Field("account_code") accountCode: Int?
         ): Response<WarungKuResponse.Data<Any>>
+
+        @GET("owner/report/today")
+        suspend fun getReportToday(@Query("account_id") accountId: String?): Response<WarungKuResponse.Data<ReportResult>>
 
     }
 
