@@ -1,6 +1,7 @@
 package com.implizstudio.android.app.warungkuowner.data.repository.warungku
 
 import com.implizstudio.android.app.warungkuowner.data.model.Owner
+import com.implizstudio.android.app.warungkuowner.data.model.ReportResult
 import com.implizstudio.android.app.warungkuowner.data.model.Verification
 import com.implizstudio.android.app.warungkuowner.data.model.response.WarungKuResponse
 import com.implizstudio.android.app.warungkuowner.data.remote.ApiResult
@@ -14,7 +15,7 @@ interface WarungKuRepository {
         password: String?
     ): ApiResult<WarungKuResponse.Data<Owner>>
 
-    suspend fun doSendVerificationCode(
+    suspend fun getVerificationCode(
         accountId: String?,
         accountEmail: String?
     ): ApiResult<WarungKuResponse.Data<Verification>>
@@ -24,5 +25,7 @@ interface WarungKuRepository {
         accountId: String?,
         accountCode: Int?
     ): ApiResult<WarungKuResponse.Data<Any>>
+
+    suspend fun getReportToday(accountId: String?): ApiResult<WarungKuResponse.Data<ReportResult>>
 
 }

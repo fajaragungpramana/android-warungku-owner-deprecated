@@ -1,6 +1,7 @@
 package com.implizstudio.android.app.warungkuowner.data.repository.warungku
 
 import com.implizstudio.android.app.warungkuowner.data.model.Owner
+import com.implizstudio.android.app.warungkuowner.data.model.ReportResult
 import com.implizstudio.android.app.warungkuowner.data.model.Verification
 import com.implizstudio.android.app.warungkuowner.data.model.response.WarungKuResponse
 import com.implizstudio.android.app.warungkuowner.data.remote.ApiDao
@@ -43,14 +44,14 @@ class WarungKuRepositoryImpl(private val warungKuDao: ApiDao.WarungKu) : WarungK
             ApiResult.Error(exc)
         }
 
-    override suspend fun doSendVerificationCode(
+    override suspend fun getVerificationCode(
         accountId: String?,
         accountEmail: String?
     ): ApiResult<WarungKuResponse.Data<Verification>> =
         try {
 
             val response = GlobalScope.async {
-                warungKuDao.doSendVerificationCode(accountId, accountEmail)
+                warungKuDao.getVerificationCode(accountId, accountEmail)
             }
             val result = response.await()
 
@@ -73,6 +74,21 @@ class WarungKuRepositoryImpl(private val warungKuDao: ApiDao.WarungKu) : WarungK
             val response = GlobalScope.async {
                 warungKuDao.doAccountVerification(accessToken, accountId, accountCode)
             }
+            val result = response.await()
+
+            if (result.isSuccessful)
+                ApiResult.Success(result.body(), result.code())
+            else
+                ApiResult.Failure(result.code())
+
+        } catch (exc: Throwable) {
+            ApiResult.Error(exc)
+        }
+
+    override suspend fun getReportToday(accountId: String?): ApiResult<WarungKuResponse.Data<ReportResult>> =
+        try {
+
+            val response = GlobalScope.async { warungKuDao.getReportToday(accountId) }
             val result = response.await()
 
             if (result.isSuccessful)
