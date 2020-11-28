@@ -30,13 +30,13 @@ class VerificationViewModel @ViewModelInject constructor(
     val responseCode: LiveData<Int>
         get() = _responseCode
 
-    fun doSendVerificationCode(owner: Owner) {
+    fun getVerificationCode(owner: Owner) {
         context.startService(Intent(context, CountDownService::class.java))
 
         _isShowProgressBar.value = true
         GlobalScope.launch {
 
-            when (val result = warungKuRepository.doSendVerificationCode(owner.id, owner.email)) {
+            when (val result = warungKuRepository.getVerificationCode(owner.id, owner.email)) {
 
                 is ApiResult.Success -> {
                     _isShowProgressBar.postValue(false)
