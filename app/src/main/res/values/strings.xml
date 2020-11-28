@@ -60,4 +60,18 @@
     <string name="verification_code_expired">Verification Code Expired</string>
     <string name="home">Home</string>
     <string name="profile">Profile</string>
+    <string name="income_today">Income Today</string>
+    <string name="dummy_income_today"><font size='14'>Rp</font> 10.454.000</string>
+    <string name="net_profit">Net profit</string>
+    <string name="percentage">Percentage</string>
+    <string name="dummy_net_profit"><font size='10'>Rp</font> 1.609.916</string>
+    <string name="dummy_percentage">+15.4 %</string>
+    <string name="product">Product</string>
+    <string name="employee">Employee</string>
+    <string name="transaction">Transaction</string>
+    <string name="order">Order</string>
+    <string name="customer_contact">Customer Contact</string>
+    <string name="report_result">Report Result</string>
+    <string name="money_out">Money Out</string>
+    <string name="other">Other</string>
 </resources>

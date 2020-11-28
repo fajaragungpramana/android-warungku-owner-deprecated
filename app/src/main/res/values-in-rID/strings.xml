@@ -61,4 +61,18 @@
     <string name="verification_code_expired">Kode Verifikasi Kadaluarsa</string>
     <string name="home">Beranda</string>
     <string name="profile">Profil</string>
+    <string name="income_today">Pendapatan Hari Ini</string>
+    <string name="dummy_income_today"><font size='14'>Rp</font> 10.454.000</string>
+    <string name="net_profit">Keuntungan Bersih</string>
+    <string name="percentage">Persentase</string>
+    <string name="dummy_net_profit"><font size='10'>Rp</font> 1.609.916</string>
+    <string name="dummy_percentage">+15.4 %</string>
+    <string name="product">Produk</string>
+    <string name="employee">Karyawan</string>
+    <string name="transaction">Transaksi</string>
+    <string name="order">Pesanan</string>
+    <string name="customer_contact">Kontak Pelanggan</string>
+    <string name="report_result">Laporan Hasil</string>
+    <string name="money_out">Uang Keluar</string>
+    <string name="other">Lainnya</string>
 </resources>
