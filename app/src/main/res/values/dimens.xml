@@ -3,7 +3,12 @@
 
     <!-- Corner -->
     <dimen name="corner_small">2dp</dimen>
+    <dimen name="corner_primary">8dp</dimen>
     <dimen name="corner_rounded_button">28dp</dimen>
+
+    <!-- Elevation -->
+    <dimen name="elevation_primary">2dp</dimen>
+    <dimen name="elevation_secondary">1dp</dimen>
 
     <!-- Margin -->
     <dimen name="margin_small">4dp</dimen>
@@ -27,5 +32,6 @@
     <dimen name="text_primary_button">14sp</dimen>
     <dimen name="text_primary_body">14sp</dimen>
     <dimen name="text_primary_caption">12sp</dimen>
+    <dimen name="text_secondary_caption">10sp</dimen>
 
 </resources>
