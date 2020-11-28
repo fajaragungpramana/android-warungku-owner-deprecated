@@ -1,18 +1,21 @@
 package com.implizstudio.android.app.warungkuowner.ui.fragment.home
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import com.implizstudio.android.app.warungkuowner.R
+import com.implizstudio.android.app.warungkuowner.databinding.FragmentHomeBinding
+import com.implizstudio.android.app.warungkuowner.ui.base.BaseFragment
+import dagger.hilt.android.AndroidEntryPoint
 
-class HomeFragment : Fragment() {
+@AndroidEntryPoint
+class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? = inflater.inflate(R.layout.fragment_home, container, false)
+    private val viewModel by viewModels<HomeViewModel>()
+
+    override fun getContentView() = R.layout.fragment_home
+
+    override fun onCreated(savedInstanceState: Bundle?) {
+
+    }
 
 }
