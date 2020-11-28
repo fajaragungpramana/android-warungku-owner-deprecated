@@ -34,4 +34,8 @@
         <item name="android:textSize">@dimen/text_primary_caption</item>
     </style>
 
+    <style name="BottomNavigationViewText" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textSize">@dimen/text_secondary_caption</item>
+    </style>
+
 </resources>
