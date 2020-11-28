@@ -59,4 +59,6 @@
     <string name="error_text_changed_wrong_password">Password salah!</string>
     <string name="wrong_verification_code">Kode Verifikasi Salah</string>
     <string name="verification_code_expired">Kode Verifikasi Kadaluarsa</string>
+    <string name="home">Beranda</string>
+    <string name="profile">Profil</string>
 </resources>

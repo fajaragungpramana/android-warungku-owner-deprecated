@@ -58,4 +58,6 @@
     <string name="error_text_changed_wrong_password">Wrong password!</string>
     <string name="wrong_verification_code">Wrong Verification Code</string>
     <string name="verification_code_expired">Verification Code Expired</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
 </resources>
