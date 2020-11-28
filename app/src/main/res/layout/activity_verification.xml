@@ -176,7 +176,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_small"
-                android:onClick="@{() -> viewModel.doSendVerificationCode(owner)}"
+                android:onClick="@{() -> viewModel.getVerificationCode(owner)}"
                 android:text="@string/resending"
                 android:textColor="@color/color_secondary"
                 android:textStyle="bold" />
