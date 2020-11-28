@@ -22,6 +22,8 @@
         android:id="@+id/bnv_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:itemTextAppearanceActive="@style/BottomNavigationViewText"
+        app:itemTextAppearanceInactive="@style/BottomNavigationViewText"
         app:itemIconTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
