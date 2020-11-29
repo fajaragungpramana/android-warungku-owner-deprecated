@@ -37,4 +37,6 @@ abstract class BaseFragment<T : ViewDataBinding> : Fragment() {
 
     }
 
+    protected fun getViewDataBinding() = viewDataBinding
+
 }
