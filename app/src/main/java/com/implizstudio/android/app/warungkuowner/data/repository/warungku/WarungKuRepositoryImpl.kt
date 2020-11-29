@@ -2,6 +2,7 @@ package com.implizstudio.android.app.warungkuowner.data.repository.warungku
 
 import com.implizstudio.android.app.warungkuowner.data.model.Owner
 import com.implizstudio.android.app.warungkuowner.data.model.ReportResult
+import com.implizstudio.android.app.warungkuowner.data.model.Tip
 import com.implizstudio.android.app.warungkuowner.data.model.Verification
 import com.implizstudio.android.app.warungkuowner.data.model.response.WarungKuResponse
 import com.implizstudio.android.app.warungkuowner.data.remote.ApiDao
@@ -89,6 +90,21 @@ class WarungKuRepositoryImpl(private val warungKuDao: ApiDao.WarungKu) : WarungK
         try {
 
             val response = GlobalScope.async { warungKuDao.getReportToday(accountId) }
+            val result = response.await()
+
+            if (result.isSuccessful)
+                ApiResult.Success(result.body(), result.code())
+            else
+                ApiResult.Failure(result.code())
+
+        } catch (exc: Throwable) {
+            ApiResult.Error(exc)
+        }
+
+    override suspend fun getTip(category: String?): ApiResult<WarungKuResponse.Data<List<Tip>>> =
+        try {
+
+            val response = GlobalScope.async { warungKuDao.getTip(category) }
             val result = response.await()
 
             if (result.isSuccessful)

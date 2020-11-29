@@ -2,6 +2,7 @@ package com.implizstudio.android.app.warungkuowner.data.repository.warungku
 
 import com.implizstudio.android.app.warungkuowner.data.model.Owner
 import com.implizstudio.android.app.warungkuowner.data.model.ReportResult
+import com.implizstudio.android.app.warungkuowner.data.model.Tip
 import com.implizstudio.android.app.warungkuowner.data.model.Verification
 import com.implizstudio.android.app.warungkuowner.data.model.response.WarungKuResponse
 import com.implizstudio.android.app.warungkuowner.data.remote.ApiResult
@@ -27,5 +28,7 @@ interface WarungKuRepository {
     ): ApiResult<WarungKuResponse.Data<Any>>
 
     suspend fun getReportToday(accountId: String?): ApiResult<WarungKuResponse.Data<ReportResult>>
+
+    suspend fun getTip(category: String?): ApiResult<WarungKuResponse.Data<List<Tip>>>
 
 }
