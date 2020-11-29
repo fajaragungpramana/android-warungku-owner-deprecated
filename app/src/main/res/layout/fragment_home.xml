@@ -3,9 +3,33 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+
+        <variable
+            name="reportResult"
+            type="com.implizstudio.android.app.warungkuowner.data.model.ReportResult" />
+
+        <variable
+            name="viewModel"
+            type="com.implizstudio.android.app.warungkuowner.ui.fragment.home.HomeViewModel" />
+
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <ProgressBar
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_primary_horizontal_progress"
+            android:indeterminate="true"
+            app:isShowed="@{viewModel.isShowProgressBar()}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
         <ImageView
             android:id="@+id/iv_home_ic_app"
@@ -38,6 +62,7 @@
             tools:ignore="ContentDescription" />
 
         <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/srl_home"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginTop="@dimen/margin_secondary"
@@ -69,6 +94,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/margin_secondary"
                         android:layout_marginTop="@dimen/margin_small"
+                        app:currencyFormat="@{reportResult.income}"
                         tools:text="@string/dummy_income_today" />
 
                     <LinearLayout
@@ -108,6 +134,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:textColor="@color/color_primary"
+                            app:currencyFormat="@{reportResult.netIncome}"
                             tools:text="@string/dummy_net_profit" />
 
                         <TextView
@@ -116,6 +143,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="end"
+                            android:text="@{reportResult.percentage}"
                             android:textColor="@color/color_primary"
                             tools:text="@string/dummy_percentage" />
 
@@ -240,6 +268,42 @@
                             app:layout_constraintVertical_bias="1.0" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/margin_secondary"
+                        android:layout_marginTop="@dimen/margin_secondary"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/PrimaryButton"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/tips_for_you"
+                            android:textColor="@color/color_primary_text" />
+
+                        <TextView
+                            style="@style/PrimaryCaption"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:drawableEnd="@drawable/ic_see_all"
+                            android:gravity="end"
+                            android:text="@string/more_details"
+                            android:textColor="@color/color_secondary"
+                            tools:ignore="UseCompatTextViewDrawableXml" />
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_tip"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
                 </LinearLayout>
 
