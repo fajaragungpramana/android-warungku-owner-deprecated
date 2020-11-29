@@ -75,4 +75,7 @@
     <string name="report_result">Laporan Hasil</string>
     <string name="money_out">Uang Keluar</string>
     <string name="other">Lainnya</string>
+    <string name="rp">Rp</string>
+    <string name="tips_for_you">Tips Untuk Kamu</string>
+    <string name="more_details">Selengkapnya</string>
 </resources>

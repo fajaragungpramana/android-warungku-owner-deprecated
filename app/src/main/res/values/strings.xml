@@ -74,4 +74,7 @@
     <string name="report_result">Report Result</string>
     <string name="money_out">Money Out</string>
     <string name="other">Other</string>
+    <string name="rp">Rp</string>
+    <string name="tips_for_you">Tips For You</string>
+    <string name="more_details">More details</string>
 </resources>
