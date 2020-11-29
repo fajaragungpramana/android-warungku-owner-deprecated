@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="tip"
+            type="com.implizstudio.android.app.warungkuowner.data.model.Tip" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="250dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="@dimen/margin_secondary"
+            android:layout_marginTop="@dimen/margin_secondary"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardCornerRadius="@dimen/corner_primary"
+            app:cardElevation="@dimen/elevation_primary">
+
+            <ImageView
+                android:id="@+id/iv_adapter_tip_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:imageUrl="@{tip.image}"
+                tools:ignore="ContentDescription" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            style="@style/PrimaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_secondary"
+            android:layout_marginTop="@dimen/margin_primary"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:minLines="2"
+            android:text="@{tip.title}"
+            android:textColor="@color/color_primary_text"
+            tools:text="@string/title" />
+
+    </LinearLayout>
+
+</layout>
