@@ -2,6 +2,7 @@ package com.implizstudio.android.app.warungkuowner.data.remote
 
 import com.implizstudio.android.app.warungkuowner.data.model.Owner
 import com.implizstudio.android.app.warungkuowner.data.model.ReportResult
+import com.implizstudio.android.app.warungkuowner.data.model.Tip
 import com.implizstudio.android.app.warungkuowner.data.model.Verification
 import com.implizstudio.android.app.warungkuowner.data.model.response.WarungKuResponse
 import retrofit2.Response
@@ -38,6 +39,9 @@ interface ApiDao {
 
         @GET("owner/report/today")
         suspend fun getReportToday(@Query("account_id") accountId: String?): Response<WarungKuResponse.Data<ReportResult>>
+
+        @GET("tip")
+        suspend fun getTip(@Query("category") category: String?): Response<WarungKuResponse.Data<List<Tip>>>
 
     }
 
