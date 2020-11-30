@@ -78,4 +78,10 @@
     <string name="rp">Rp</string>
     <string name="tips_for_you">Tips Untuk Kamu</string>
     <string name="more_details">Selengkapnya</string>
+    <string name="search_product">Cari Produk…</string>
+    <string name="all">Semua</string>
+    <string name="food">Makanan</string>
+    <string name="drink">Minuman</string>
+    <string name="medicine">Obat</string>
+    <string name="tool">Alat</string>
 </resources>

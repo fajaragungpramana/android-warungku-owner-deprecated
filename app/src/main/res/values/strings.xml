@@ -77,4 +77,10 @@
     <string name="rp">Rp</string>
     <string name="tips_for_you">Tips For You</string>
     <string name="more_details">More details</string>
+    <string name="search_product">Search Product…</string>
+    <string name="all">All</string>
+    <string name="food">Food</string>
+    <string name="drink">Drink</string>
+    <string name="medicine">Medicine</string>
+    <string name="tool">Tool</string>
 </resources>
