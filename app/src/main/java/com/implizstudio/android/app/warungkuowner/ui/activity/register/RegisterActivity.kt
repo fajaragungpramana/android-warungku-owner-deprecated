@@ -64,7 +64,11 @@ class RegisterActivity : BaseActivity<ActivityRegisterBinding>() {
         })
         viewModel.responseCode.observe(this, {
             when (it) {
-                Constant.HTTP_RESPONSE_CREATED -> startActivity<VerificationActivity>()
+                Constant.HTTP_RESPONSE_CREATED -> {
+                    val email = getViewDataBinding().owner?.email.toString()
+
+                    startActivity<VerificationActivity>(Constant.KEY_OWNER_EMAIL to email)
+                }
 
                 Constant.HTTP_RESPONSE_NOT_ACCEPTABLE -> til_register_email.error =
                     getString(R.string.error_text_changed_account_already_registered)
