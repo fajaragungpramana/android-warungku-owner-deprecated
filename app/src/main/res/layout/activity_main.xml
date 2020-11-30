@@ -7,14 +7,17 @@
     android:fitsSystemWindows="true"
     tools:context=".ui.activity.main.MainActivity">
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fcv_main"
-        android:name="com.implizstudio.android.app.warungkuowner.ui.fragment.main.MainFragment"
+    <fragment
+        android:id="@+id/f_main"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        app:defaultNavHost="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/navigation_main"
+        tools:ignore="FragmentTagUsage" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
