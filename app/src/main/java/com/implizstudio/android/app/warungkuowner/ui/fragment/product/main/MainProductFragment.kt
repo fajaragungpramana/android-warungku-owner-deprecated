@@ -24,11 +24,11 @@ class MainProductFragment : BaseFragment<FragmentMainProductBinding>() {
         }
 
         vp_main_product.adapter = TabAdapter(childFragmentManager).apply {
-            set(CategoryAllProductFragment(), "All")
-            set(CategoryFoodProductFragment(), "Food")
-            set(CategoryDrinkProductFragment(), "Drink")
-            set(CategoryMedicineProductFragment(), "Medicine")
-            set(CategoryToolProductFragment(), "Tool")
+            set(CategoryAllProductFragment(), getString(R.string.all))
+            set(CategoryFoodProductFragment(), getString(R.string.food))
+            set(CategoryDrinkProductFragment(), getString(R.string.drink))
+            set(CategoryMedicineProductFragment(), getString(R.string.medicine))
+            set(CategoryToolProductFragment(), getString(R.string.tool))
         }
         tl_main_product.setupWithViewPager(vp_main_product)
 
