@@ -2,6 +2,7 @@ package com.implizstudio.android.app.warungkuowner.ui.fragment.home
 
 import android.os.Bundle
 import androidx.fragment.app.viewModels
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.implizstudio.android.app.warungkuowner.R
 import com.implizstudio.android.app.warungkuowner.data.model.constant.Constant
@@ -44,6 +45,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
                 it.adapter = TipAdapter(requireActivity(), listTip)
             }
         })
+
+        val navController = Navigation.findNavController(requireActivity(), R.id.f_main)
+        fc_product.setOnClickListener { navController.navigate(R.id.action_nav_home_to_nav_main_product) }
 
     }
 
