@@ -84,4 +84,5 @@
     <string name="drink">Minuman</string>
     <string name="medicine">Obat</string>
     <string name="tool">Alat</string>
+    <string name="add_product">Tambah Produk</string>
 </resources>
