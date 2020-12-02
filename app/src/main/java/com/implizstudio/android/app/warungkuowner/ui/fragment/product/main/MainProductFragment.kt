@@ -2,6 +2,7 @@ package com.implizstudio.android.app.warungkuowner.ui.fragment.product.main
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.Navigation
 import com.implizstudio.android.app.warungkuowner.R
 import com.implizstudio.android.app.warungkuowner.databinding.FragmentMainProductBinding
 import com.implizstudio.android.app.warungkuowner.ui.adapter.TabAdapter
@@ -18,10 +19,6 @@ class MainProductFragment : BaseFragment<FragmentMainProductBinding>() {
     override fun getContentView() = R.layout.fragment_main_product
 
     override fun onCreated(savedInstanceState: Bundle?) {
-        (activity as AppCompatActivity).let {
-            it.setSupportActionBar(t_main_product)
-            it.title = null
-        }
 
         vp_main_product.adapter = TabAdapter(childFragmentManager).apply {
             set(CategoryAllProductFragment(), getString(R.string.all))
@@ -31,6 +28,12 @@ class MainProductFragment : BaseFragment<FragmentMainProductBinding>() {
             set(CategoryToolProductFragment(), getString(R.string.tool))
         }
         tl_main_product.setupWithViewPager(vp_main_product)
+
+        ib_main_product_add_product.setOnClickListener {
+            Navigation.findNavController(requireActivity(), R.id.f_main).apply {
+                navigate(R.id.action_nav_main_product_to_nav_add_product)
+            }
+        }
 
     }
 
