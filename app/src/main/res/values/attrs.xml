@@ -7,4 +7,9 @@
     <declare-styleable name="warn_component_attributes">
         <attr name="warnMessage" format="reference" />
     </declare-styleable>
+    <declare-styleable name="field_unit_component_attributes">
+        <attr name="unitPrimary" format="reference" />
+        <attr name="unitSecondary" format="reference" />
+        <attr name="unitHint" format="reference" />
+    </declare-styleable>
 </resources>
