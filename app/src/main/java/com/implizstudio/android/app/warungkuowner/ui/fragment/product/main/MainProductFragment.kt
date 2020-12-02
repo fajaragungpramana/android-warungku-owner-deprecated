@@ -1,8 +1,8 @@
 package com.implizstudio.android.app.warungkuowner.ui.fragment.product.main
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import com.implizstudio.android.app.warungkuowner.R
 import com.implizstudio.android.app.warungkuowner.databinding.FragmentMainProductBinding
 import com.implizstudio.android.app.warungkuowner.ui.adapter.TabAdapter
@@ -29,6 +29,7 @@ class MainProductFragment : BaseFragment<FragmentMainProductBinding>() {
         }
         tl_main_product.setupWithViewPager(vp_main_product)
 
+        iv_main_product_ic_back.setOnClickListener { findNavController().navigateUp() }
         ib_main_product_add_product.setOnClickListener {
             Navigation.findNavController(requireActivity(), R.id.f_main).apply {
                 navigate(R.id.action_nav_main_product_to_nav_add_product)
