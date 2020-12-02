@@ -49,7 +49,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         })
 
         val navController = Navigation.findNavController(requireActivity(), R.id.f_main)
-        iv_main_product_ic_back.setOnClickListener { findNavController().navigateUp() }
         fc_product.setOnClickListener { navController.navigate(R.id.action_nav_home_to_nav_main_product) }
 
     }
