@@ -19,6 +19,17 @@
     <fragment
         android:id="@+id/nav_main_product"
         android:name="com.implizstudio.android.app.warungkuowner.ui.fragment.product.main.MainProductFragment"
-        tools:layout="@layout/fragment_main_product" />
+        tools:layout="@layout/fragment_main_product" >
+        <action
+            android:id="@+id/action_nav_main_product_to_nav_add_product"
+            app:enterAnim="@anim/enter"
+            app:exitAnim="@anim/exit"
+            app:destination="@id/nav_add_product" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_add_product"
+        android:name="com.implizstudio.android.app.warungkuowner.ui.fragment.product.add.AddProductFragment"
+        tools:layout="@layout/fragment_add_product" />
 
 </navigation>
