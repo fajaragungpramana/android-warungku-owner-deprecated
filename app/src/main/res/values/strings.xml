@@ -84,4 +84,14 @@
     <string name="medicine">Medicine</string>
     <string name="tool">Tool</string>
     <string name="add_product">Add Product</string>
+    <string name="warn_message_information_product">Please fill in the product data correctly so that it is easier for you to manage that data.</string>
+    <string name="product_information">Product Information</string>
+    <string name="product_name">Product name</string>
+    <string name="pcs">PCS</string>
+    <string name="box">BOX</string>
+    <string name="gr">GR</string>
+    <string name="kg">KG</string>
+    <string name="unit">Unit</string>
+    <string name="weight">Weight</string>
+    <string name="available">Available</string>
 </resources>

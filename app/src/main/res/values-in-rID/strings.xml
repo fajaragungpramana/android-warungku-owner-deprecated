@@ -85,4 +85,14 @@
     <string name="medicine">Obat</string>
     <string name="tool">Alat</string>
     <string name="add_product">Tambah Produk</string>
+    <string name="warn_message_information_product">Harap isi data produk dengan benar agar kamu lebih mudah mengelola data tersebut.</string>
+    <string name="product_information">Informasi Produk</string>
+    <string name="product_name">Nama product</string>
+    <string name="pcs">PCS</string>
+    <string name="box">BOX</string>
+    <string name="gr">GR</string>
+    <string name="kg">KG</string>
+    <string name="unit">Unit</string>
+    <string name="weight">Berat</string>
+    <string name="available">Tersedia</string>
 </resources>
