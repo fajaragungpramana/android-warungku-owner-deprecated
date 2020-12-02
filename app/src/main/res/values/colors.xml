@@ -10,4 +10,6 @@
     <color name="color_secondary_divide">#F2F2F2</color>
     <color name="color_primary_background">#F2F2F2</color>
     <color name="color_on_primary_dark">#333333</color>
+    <color name="color_primary_warn">#F2994A</color>
+    <color name="color_secondary_warn">#4DF2C94C</color>
 </resources>
