@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_warn"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_warn"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_warn_message"
+        style="@style/PrimaryCaption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_primary"
+        android:textColor="@color/color_primary_warn"
+        tools:text="@string/message" />
+
+</LinearLayout>
