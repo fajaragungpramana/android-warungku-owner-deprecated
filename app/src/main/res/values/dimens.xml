@@ -19,6 +19,7 @@
     <dimen name="margin_very_high">80dp</dimen>
 
     <!-- Padding -->
+    <dimen name="padding_small">4dp</dimen>
     <dimen name="padding_primary">8dp</dimen>
     <dimen name="padding_secondary">16dp</dimen>
 
