@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <LinearLayout
@@ -33,6 +34,81 @@
                 android:textColor="@color/color_primary_text" />
 
         </androidx.appcompat.widget.Toolbar>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.implizstudio.android.app.warungkuowner.ui.component.WarnComponent
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_secondary"
+                    android:layout_marginTop="@dimen/margin_primary"
+                    app:warnMessage="@string/warn_message_information_product" />
+
+                <TextView
+                    style="@style/PrimaryButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_secondary"
+                    android:layout_marginTop="@dimen/margin_secondary"
+                    android:text="@string/product_information"
+                    android:textColor="@color/color_primary_text" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_secondary"
+                    android:layout_marginTop="@dimen/margin_secondary"
+                    app:errorEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        style="@style/PrimaryBody"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/color_on_primary_light"
+                        android:hint="@string/product_name"
+                        android:inputType="textPersonName" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_secondary"
+                    android:layout_marginTop="@dimen/margin_secondary"
+                    android:orientation="horizontal">
+
+                    <com.implizstudio.android.app.warungkuowner.ui.component.FieldUnitComponent
+                        android:id="@+id/fuc_weight"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_primary"
+                        android:layout_weight="1"
+                        app:unitHint="@string/weight"
+                        app:unitPrimary="@string/gr"
+                        app:unitSecondary="@string/kg" />
+
+                    <com.implizstudio.android.app.warungkuowner.ui.component.FieldUnitComponent
+                        android:id="@+id/fuc_available"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_primary"
+                        android:layout_weight="1"
+                        app:unitHint="@string/available"
+                        app:unitPrimary="@string/pcs"
+                        app:unitSecondary="@string/box" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
 
     </LinearLayout>
 
