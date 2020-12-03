@@ -17,6 +17,8 @@ class FieldUnitComponent @JvmOverloads constructor(
     defStyleRes: Int = 0
 ) : ConstraintLayout(context, attrs, defStyle, defStyleRes) {
 
+    private lateinit var onSelectedUnitListener: OnSelectedUnitListener
+
     private var isUnitClicked = 0
 
     init {
@@ -68,6 +70,8 @@ class FieldUnitComponent @JvmOverloads constructor(
                             it.text = getString(unitSecondary)
                             0
                         }
+
+                    onSelectedUnitListener.getText(it.text.toString())
                 }
             }
         }
@@ -75,5 +79,15 @@ class FieldUnitComponent @JvmOverloads constructor(
 
     private fun getDrawable(resId: Int) = ContextCompat.getDrawable(context, resId)
     private fun getString(resId: Int) = resources.getString(resId)
+
+    fun getUnitText() = tv_field_unit.text.toString()
+
+    fun setOnSelectedUnitListener(onSelectedUnitListener: OnSelectedUnitListener) {
+        this.onSelectedUnitListener = onSelectedUnitListener
+    }
+
+    interface OnSelectedUnitListener {
+        fun getText(text: String)
+    }
 
 }
