@@ -106,6 +106,42 @@
 
                 </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_secondary"
+                    android:layout_marginTop="@dimen/margin_secondary"
+                    android:orientation="horizontal">
+
+                    <com.implizstudio.android.app.warungkuowner.ui.component.FieldMinimalOrderComponent
+                        android:id="@+id/fmo_minimal_order"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_primary"
+                        android:layout_weight="1" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_expired"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_primary"
+                        android:layout_weight="1"
+                        app:errorEnabled="true">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/tie_expired"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/color_on_primary_light"
+                            android:focusable="false"
+                            android:drawableEnd="@drawable/ic_date"
+                            android:hint="@string/expired"
+                            android:inputType="text" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
             </LinearLayout>
 
         </androidx.core.widget.NestedScrollView>
