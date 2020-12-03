@@ -95,4 +95,6 @@
     <string name="unit">Unit</string>
     <string name="weight">Berat</string>
     <string name="available">Tersedia</string>
+    <string name="minimal_order">Min memesan</string>
+    <string name="expired">Kadaluarsa</string>
 </resources>

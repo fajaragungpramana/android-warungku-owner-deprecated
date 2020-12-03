@@ -94,4 +94,6 @@
     <string name="unit">Unit</string>
     <string name="weight">Weight</string>
     <string name="available">Available</string>
+    <string name="minimal_order">Min order</string>
+    <string name="expired">Expired</string>
 </resources>
