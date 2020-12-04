@@ -44,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <com.implizstudio.android.app.warungkuowner.ui.component.WarnComponent
+                <com.implizstudio.android.app.component.view.WarnView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/margin_secondary"
@@ -84,25 +84,25 @@
                     android:layout_marginTop="@dimen/margin_secondary"
                     android:orientation="horizontal">
 
-                    <com.implizstudio.android.app.warungkuowner.ui.component.FieldUnitComponent
-                        android:id="@+id/fuc_weight"
+                    <com.implizstudio.android.app.component.field.UnitField
+                        android:id="@+id/uf_weight"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="@dimen/margin_primary"
                         android:layout_weight="1"
-                        app:unitHint="@string/weight"
-                        app:unitPrimary="@string/gr"
-                        app:unitSecondary="@string/kg" />
+                        app:unitBackgroundFocus="@drawable/bg_unit_focus"
+                        app:unitBackgroundUnFocus="@drawable/bg_unit_un_focus"
+                        app:unitHint="@string/weight" />
 
-                    <com.implizstudio.android.app.warungkuowner.ui.component.FieldUnitComponent
-                        android:id="@+id/fuc_available"
+                    <com.implizstudio.android.app.component.field.UnitField
+                        android:id="@+id/uf_available"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/margin_primary"
                         android:layout_weight="1"
-                        app:unitHint="@string/available"
-                        app:unitPrimary="@string/pcs"
-                        app:unitSecondary="@string/box" />
+                        app:unitBackgroundFocus="@drawable/bg_unit_focus"
+                        app:unitBackgroundUnFocus="@drawable/bg_unit_un_focus"
+                        app:unitHint="@string/available" />
 
                 </LinearLayout>
 
@@ -113,12 +113,14 @@
                     android:layout_marginTop="@dimen/margin_secondary"
                     android:orientation="horizontal">
 
-                    <com.implizstudio.android.app.warungkuowner.ui.component.FieldMinimalOrderComponent
-                        android:id="@+id/fmo_minimal_order"
+                    <com.implizstudio.android.app.component.field.UnitField
+                        android:id="@+id/uf_minimal_order"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="@dimen/margin_primary"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        app:unitClickable="@bool/is_false"
+                        app:unitHint="@string/minimal_order" />
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/til_expired"
@@ -133,8 +135,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@color/color_on_primary_light"
-                            android:focusable="false"
                             android:drawableEnd="@drawable/ic_date"
+                            android:focusable="false"
                             android:hint="@string/expired"
                             android:inputType="text" />
 

@@ -155,47 +155,47 @@
                         android:layout_marginTop="@dimen/margin_medium"
                         android:background="@color/color_secondary_divide">
 
-                        <com.implizstudio.android.app.warungkuowner.ui.component.FeatureComponent
-                            android:id="@+id/fc_product"
+                        <com.implizstudio.android.app.component.view.FeatureView
+                            android:id="@+id/fv_product"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/margin_medium"
                             app:featureIcon="@drawable/ic_product"
                             app:featureTitle="@string/product"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toStartOf="@+id/fc_employee"
+                            app:layout_constraintEnd_toStartOf="@+id/fv_employee"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintVertical_bias="0.0" />
 
-                        <com.implizstudio.android.app.warungkuowner.ui.component.FeatureComponent
-                            android:id="@+id/fc_employee"
+                        <com.implizstudio.android.app.component.view.FeatureView
+                            android:id="@+id/fv_employee"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/margin_medium"
                             app:featureIcon="@drawable/ic_employee"
                             app:featureTitle="@string/employee"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toStartOf="@+id/fc_transaction"
-                            app:layout_constraintStart_toEndOf="@+id/fc_product"
+                            app:layout_constraintEnd_toStartOf="@+id/fv_transaction"
+                            app:layout_constraintStart_toEndOf="@+id/fv_product"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintVertical_bias="0.0" />
 
-                        <com.implizstudio.android.app.warungkuowner.ui.component.FeatureComponent
-                            android:id="@+id/fc_transaction"
+                        <com.implizstudio.android.app.component.view.FeatureView
+                            android:id="@+id/fv_transaction"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/margin_medium"
                             app:featureIcon="@drawable/ic_transaction"
                             app:featureTitle="@string/transaction"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toStartOf="@+id/fc_order"
-                            app:layout_constraintStart_toEndOf="@+id/fc_employee"
+                            app:layout_constraintEnd_toStartOf="@+id/fv_order"
+                            app:layout_constraintStart_toEndOf="@+id/fv_employee"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintVertical_bias="0.0" />
 
-                        <com.implizstudio.android.app.warungkuowner.ui.component.FeatureComponent
-                            android:id="@+id/fc_order"
+                        <com.implizstudio.android.app.component.view.FeatureView
+                            android:id="@+id/fv_order"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/margin_medium"
@@ -203,12 +203,12 @@
                             app:featureTitle="@string/order"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/fc_transaction"
+                            app:layout_constraintStart_toEndOf="@+id/fv_transaction"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintVertical_bias="0.0" />
 
-                        <com.implizstudio.android.app.warungkuowner.ui.component.FeatureComponent
-                            android:id="@+id/fc_customer_contact"
+                        <com.implizstudio.android.app.component.view.FeatureView
+                            android:id="@+id/fv_customer_contact"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/margin_secondary"
@@ -216,14 +216,14 @@
                             app:featureIcon="@drawable/ic_contact"
                             app:featureTitle="@string/customer_contact"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toStartOf="@+id/fc_report_result"
+                            app:layout_constraintEnd_toStartOf="@+id/fv_report_result"
                             app:layout_constraintHorizontal_bias="0.5"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/fc_product"
+                            app:layout_constraintTop_toBottomOf="@+id/fv_product"
                             app:layout_constraintVertical_bias="1.0" />
 
-                        <com.implizstudio.android.app.warungkuowner.ui.component.FeatureComponent
-                            android:id="@+id/fc_report_result"
+                        <com.implizstudio.android.app.component.view.FeatureView
+                            android:id="@+id/fv_report_result"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/margin_secondary"
@@ -231,14 +231,14 @@
                             app:featureIcon="@drawable/ic_report_result"
                             app:featureTitle="@string/report_result"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toStartOf="@+id/fc_money_out"
+                            app:layout_constraintEnd_toStartOf="@+id/fv_money_out"
                             app:layout_constraintHorizontal_bias="0.5"
-                            app:layout_constraintStart_toEndOf="@+id/fc_customer_contact"
-                            app:layout_constraintTop_toBottomOf="@+id/fc_employee"
+                            app:layout_constraintStart_toEndOf="@+id/fv_customer_contact"
+                            app:layout_constraintTop_toBottomOf="@+id/fv_employee"
                             app:layout_constraintVertical_bias="1.0" />
 
-                        <com.implizstudio.android.app.warungkuowner.ui.component.FeatureComponent
-                            android:id="@+id/fc_money_out"
+                        <com.implizstudio.android.app.component.view.FeatureView
+                            android:id="@+id/fv_money_out"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/margin_secondary"
@@ -246,14 +246,14 @@
                             app:featureIcon="@drawable/ic_money_out"
                             app:featureTitle="@string/money_out"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toStartOf="@+id/fc_other"
+                            app:layout_constraintEnd_toStartOf="@+id/fv_other"
                             app:layout_constraintHorizontal_bias="0.5"
-                            app:layout_constraintStart_toEndOf="@+id/fc_report_result"
-                            app:layout_constraintTop_toBottomOf="@+id/fc_transaction"
+                            app:layout_constraintStart_toEndOf="@+id/fv_report_result"
+                            app:layout_constraintTop_toBottomOf="@+id/fv_transaction"
                             app:layout_constraintVertical_bias="1.0" />
 
-                        <com.implizstudio.android.app.warungkuowner.ui.component.FeatureComponent
-                            android:id="@+id/fc_other"
+                        <com.implizstudio.android.app.component.view.FeatureView
+                            android:id="@+id/fv_other"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/margin_secondary"
@@ -262,10 +262,10 @@
                             app:featureTitle="@string/other"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.5"
-                            app:layout_constraintStart_toEndOf="@+id/fc_money_out"
-                            app:layout_constraintTop_toBottomOf="@+id/fc_order"
-                            app:layout_constraintVertical_bias="1.0" />
+                            app:layout_constraintHorizontal_bias="0.716"
+                            app:layout_constraintStart_toEndOf="@+id/fv_money_out"
+                            app:layout_constraintTop_toBottomOf="@+id/fv_order"
+                            app:layout_constraintVertical_bias="0.0" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
