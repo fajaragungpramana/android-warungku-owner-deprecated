@@ -3,10 +3,10 @@ package com.implizstudio.android.app.warungkuowner.ui.fragment.product.add
 import android.app.DatePickerDialog
 import android.os.Bundle
 import androidx.navigation.fragment.findNavController
+import com.implizstudio.android.app.component.field.UnitField
 import com.implizstudio.android.app.warungkuowner.R
 import com.implizstudio.android.app.warungkuowner.databinding.FragmentAddProductBinding
 import com.implizstudio.android.app.warungkuowner.ui.base.BaseFragment
-import com.implizstudio.android.app.warungkuowner.ui.component.FieldUnitComponent
 import kotlinx.android.synthetic.main.fragment_add_product.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -31,12 +31,19 @@ class AddProductFragment : BaseFragment<FragmentAddProductBinding>() {
     override fun onCreated(savedInstanceState: Bundle?) {
         iv_add_product_ic_back.setOnClickListener { findNavController().navigateUp() }
 
-        fmo_minimal_order.setUnit(fuc_available.getUnitText())
-        fuc_available.setOnSelectedUnitListener(object : FieldUnitComponent.OnSelectedUnitListener {
-            override fun getText(text: String) {
-                fmo_minimal_order.setUnit(text)
-            }
-        })
+        val listWeight = resources.getStringArray(R.array.list_unit_weight)
+        val listAvailable = resources.getStringArray(R.array.list_unit_available)
+
+        uf_weight.setUnitList(listWeight)
+        uf_available.let {
+            it.setUnitList(listAvailable)
+            it.setOnSelectedUnitListener(object : UnitField.OnSelectedUnitListener {
+                override fun getUnitText(text: String) {
+                    uf_minimal_order.setOnSelectedUnitText(text)
+                }
+            })
+        }
+        uf_minimal_order.setOnSelectedUnitText(listAvailable[0])
 
         tie_expired.setOnClickListener {
             DatePickerDialog(
@@ -47,7 +54,6 @@ class AddProductFragment : BaseFragment<FragmentAddProductBinding>() {
                 calendar.get(Calendar.DAY_OF_MONTH)
             ).show()
         }
-
     }
 
 }
