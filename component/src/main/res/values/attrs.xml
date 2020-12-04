@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="warnView">
+        <attr name="warnMessage" format="string|reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="featureView">
+        <attr name="featureIcon" format="reference" />
+        <attr name="featureTitle" format="string|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="unitField">
+        <attr name="unitHint" format="string|reference" />
+        <attr name="unitClickable" format="boolean|reference" />
+        <attr name="unitBackgroundFocus" format="reference" />
+        <attr name="unitBackgroundUnFocus" format="reference" />
+    </declare-styleable>
+
+</resources>

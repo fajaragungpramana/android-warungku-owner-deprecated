@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:layout_height="wrap_content">
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_field_unit"
+        android:id="@+id/til_unit_field"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:errorEnabled="true"
@@ -16,28 +16,27 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tie_field_unit"
+            android:id="@+id/tie_unit_field"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/unit"
             android:background="@color/color_on_primary_light"
-            android:inputType="numberDecimal" />
+            android:hint="@string/unit"
+            android:inputType="number" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/tv_field_unit"
+        android:id="@+id/tv_unit_field"
         style="@style/PrimaryCaption"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/bg_unit_un_focus"
         android:padding="@dimen/padding_small"
-        android:text="@string/unit"
-        android:textColor="@color/color_on_primary_light"
+        android:textColor="@color/color_primary_divide"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/unit" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
