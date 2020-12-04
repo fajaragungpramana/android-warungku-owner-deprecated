@@ -3,7 +3,6 @@ package com.implizstudio.android.app.warungkuowner.ui.fragment.home
 import android.os.Bundle
 import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.implizstudio.android.app.warungkuowner.R
 import com.implizstudio.android.app.warungkuowner.data.model.constant.Constant
@@ -13,7 +12,6 @@ import com.implizstudio.android.app.warungkuowner.ui.base.BaseFragment
 import com.implizstudio.android.app.warungkuowner.util.TemporarySave
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_home.*
-import kotlinx.android.synthetic.main.fragment_main_product.*
 import javax.inject.Inject
 
 @AndroidEntryPoint
@@ -49,7 +47,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         })
 
         val navController = Navigation.findNavController(requireActivity(), R.id.f_main)
-        fc_product.setOnClickListener { navController.navigate(R.id.action_nav_home_to_nav_main_product) }
+        fv_product.setOnClickListener { navController.navigate(R.id.action_nav_home_to_nav_main_product) }
 
     }
 
